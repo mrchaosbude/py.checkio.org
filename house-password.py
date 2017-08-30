@@ -1,31 +1,35 @@
 '''
 - länge =< 10
-- gross geschrieben =< 1
+- gross geschrieben
+- klein geschrieben
+- enthält nummern
 - keine sonderzeichen
+
 '''
 
 def checkio(data):
     lower = 0
     upper = 0
-    spezial = 0
-    if len(data) < 10:
+    digit = 0
+
+    if len(data) < 10: # Check the length
         return False
     for c in data:
-        if c.islower():
+        if c.islower(): # Check lower case
             lower += 1
-        elif c.isupper():
+        elif c.isupper(): # Check upper case
             upper += 1
-        try:
+        elif c.isdigit(): # Check digit
+            digit += 1
+        try: # Check if it is ascii
             c.encode('ascii');
         except UnicodeEncodeError:
-            print("False")
-        else:
-            print("True")
+            return False
 
-    print(lower + upper + spezial)
-
-    #replace this for solution
-    return True or False
+    if (lower >= 1 and upper >= 1 and digit >= 1): # test the condition
+        return True
+    else:
+        return False
 
 #Some hints
 #Just check all conditions
