@@ -1,7 +1,7 @@
 
 
 def count_words(text, words):
-    return 0
+    return 1
 
 
 if __name__ == '__main__':
