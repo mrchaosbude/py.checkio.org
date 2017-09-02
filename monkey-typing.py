@@ -1,7 +1,17 @@
 
 
 def count_words(text, words):
-    return 1
+    count = 0
+    
+    for w in words:
+        w = w.lower()
+        print(w)
+        i = text.find(w)
+        if i <= 0:
+            count += 1
+            print (count)
+            
+    return count
 
 
 if __name__ == '__main__':
