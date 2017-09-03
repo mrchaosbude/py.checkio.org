@@ -2,25 +2,25 @@
 
 def count_words(text, words):
     count = 0
-    
+    t = text.lower()
+    print(t)
     for w in words:
-        w = w.lower()
-        print(w)
-        i = text.find(w)
+        i = text.find(w [0:])
+        print(i , w)
         if i <= 0:
             count += 1
-            print (count)
-            
+            #print (count)
+    #print(count)
     return count
 
 
 if __name__ == '__main__':
+    count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"})
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3, "Example"
-    assert count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2, "BANANAS!"
-    assert count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-                       {"sum", "hamlet", "infinity", "anything"}) == 1, "Weird text"
-    print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+    #assert count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3, "Example"
+    #assert count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2, "BANANAS!"
+    #assert count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", {"sum", "hamlet", "infinity", "anything"}) == 1, "Weird text"
+    #print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
 
 '''
 "Ford!" he said, "there's an infinite number of monkeys outside who want to talk to us about this script for Hamlet they've worked out."
